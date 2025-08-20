@@ -41,7 +41,9 @@ RUN bundle install && \
 
 # Copy application code
 COPY . .
-ENV SECRET_KEY_BASE=DUMMY_KEY
+ENV SECRET_KEY_BASE="${SECRET_KEY_BASE}"
+ENV DATABASE_URL="${DATABASE_URL}"
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
