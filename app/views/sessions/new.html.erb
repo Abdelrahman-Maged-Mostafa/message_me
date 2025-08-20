@@ -1,0 +1,30 @@
+  <div class="login-header">
+    <div class="login-icon">💬</div>
+    <h1 class="login-title">Welcome to Message Me</h1>
+    <p class="login-subtitle">— A complete chat app —</p>
+    <p class="login-continue">Login to continue</p>
+  </div>
+
+  <div class="login-container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <%= form_for(:session, html:{role: "form"}, url: login_path) do |f| %>
+        <%= f.label :username, "Username" %>
+        <%= f.text_field :username, placeholder:"Username" %>
+
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password, placeholder:"Password" %>
+
+        <%= f.button "Login" %>
+      <% end %>
+    </div>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <div class="signup-box">
+      <h2>New here?</h2>
+      <button onclick="window.location.href='/signup'">Sign Up</button>
+    </div>
+  </div>

@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="/" class="nav-link">Chatroom</a>
+        <a href="/messages" class="nav-link">Messages</a>
+    </div>
+    <div class="nav-right">
+        <%= link_to "Login", login_path, class: "nav-link" unless logged_in? %>
+        <div class="dropdown">
+            <button class="dropbtn"><%= logged_in? ? "#{cur_user.username} ▾" : "Account ▾" %></button>
+            <div class="dropdown-content">
+            <% if logged_in? %>
+            <a href="<%= logout_path %>" id="logout-link">Logout</a>
+            <% else %>
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+            <% end %>
+            </div>
+        </div>
+    </div>
+</nav>

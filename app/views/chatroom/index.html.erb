@@ -1,0 +1,33 @@
+  <div class="header">
+    <div class="icon">💬</div>
+    <h1 class="tagline">Say Something</h1>
+  </div>
+
+  <div class="main-container">
+    <div class="chat-section">
+      <div class="chat-box">
+        <div class="messages" id="messagesBox">
+        <% @messages.each do |message| %>
+          <div class="message"><strong><%= message.user.username %>:</strong><%= message.body %></div>
+        <% end %>
+        </div>
+        <%= form_for(:message, html:{role: "form"}, url: messages_path) do |f| %>
+          <div class="message-input">
+          <%= f.text_field :message_body, placeholder:"Type a message..." %>
+            <%= f.button "Send" %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+
+    <div class="users-section">
+      <div class="users-box">
+        <h3>Online Users</h3>
+        <ul>
+          <li>Sarah</li>
+          <li>Ali</li>
+          <li>Team</li>
+        </ul>
+      </div>
+    </div>
+  </div>

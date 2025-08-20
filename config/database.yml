@@ -17,4 +17,4 @@ test:
 
 production:
   <<: *default
-  url: postgresql://postgres:TaEDcjgTfHkKqsfBdoNERzqNevknsaiK@postgres.railway.internal:5432/railway
+  url: postgresql://postgres:wWhwFsQuvmvEHYvTTikSKYTOIyGRyDGk@metro.proxy.rlwy.net:41931/railway
