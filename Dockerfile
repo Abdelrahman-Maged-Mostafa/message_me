@@ -51,9 +51,6 @@ RUN chmod +x bin/* && \
     sed -i "s/\r$//g" bin/* && \
     sed -i 's/ruby\.exe$/ruby/' bin/*
 
-# Install JS dependencies (needed for jsbundling-rails)
-RUN yarn install
-RUN yarn build
 
 # Set dummy secret key for asset precompilation
 ENV SECRET_KEY_BASE=DUMMY_KEY
