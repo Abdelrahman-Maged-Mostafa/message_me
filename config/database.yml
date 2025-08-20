@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: poda
+  password: 12341234
+  host: localhost
+
+development:
+  <<: *default
+  database: message_me_development
+
+test:
+  <<: *default
+  database: message_me_test
+
+production:
+  <<: *default
+  url: postgresql://postgres:TaEDcjgTfHkKqsfBdoNERzqNevknsaiK@postgres.railway.internal:5432/railway
