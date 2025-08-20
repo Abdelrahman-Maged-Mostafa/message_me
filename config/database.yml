@@ -17,4 +17,4 @@ test:
 
 production:
   <<: *default
-  url: postgresql://postgres:wWhwFsQuvmvEHYvTTikSKYTOIyGRyDGk@postgres.railway.internal:5432/railway
+  url: <%= ENV['DATABASE_URL'] %>
