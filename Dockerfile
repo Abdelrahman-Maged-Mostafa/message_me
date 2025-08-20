@@ -24,7 +24,7 @@ ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development" \ 
-    RAILS_MASTER_KEY = "4656d12009eded69f5060abd1152b866"
+    RAILS_MASTER_KEY="4656d12009eded69f5060abd1152b866"
 
 # Throw-away build stage to reduce size of final image
 FROM base AS build
