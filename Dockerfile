@@ -41,15 +41,13 @@ RUN bundle install && \
 
 # Copy application code
 COPY . .
-
+ENV SECRET_KEY_BASE=DUMMY_KEY
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
 # Precompiling assets for production without requiring secret RAILS_MASTER_KEY
 RUN chmod +x ./bin/rails
 RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
-
-
 
 
 # Final stage for app image
