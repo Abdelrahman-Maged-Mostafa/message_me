@@ -373,3 +373,77 @@ body {
     transform: translateY(0);
   }
 }
+
+/* sign up page */
+.signup-page {
+  font-family: "Cairo", sans-serif;
+  background: linear-gradient(to right, #fff6e5, #ffe0b2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-page .container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-page h2 {
+  color: #ff9800;
+  margin-bottom: 1rem;
+}
+
+.signup-page .welcome {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.signup-page .input-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.signup-page label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.signup-page input {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.signup-page .btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.signup-page .btn:hover {
+  background-color: #e68900;
+}
+
+.signup-page .icon {
+  font-size: 1.2rem;
+}
