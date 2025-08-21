@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
         message = Message.new({body:params[:message][:message_body],user_id:cur_user.id})
         if message.save 
             flash[:success] = "Message sent"
-            redirect_to root_path
+            ActionCable.server.broadcast("chatroom_channel", { foo: {body: message.body, username: message.user.username} })
         else
             flash.now[:error] = "Have an error ,Message not send"
         end

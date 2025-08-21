@@ -1,3 +1,7 @@
+import "@hotwired/turbo-rails";
+import "@hotwired/stimulus";
+import "channels/chatroom_channel";
+//= require action_cable
 document.addEventListener("DOMContentLoaded", function () {
   //First option for nav bar
   const dropbtn = document.querySelector(".dropbtn");
